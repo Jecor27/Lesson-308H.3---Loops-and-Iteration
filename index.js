@@ -80,7 +80,7 @@ console.log(obj) */
     console.log('--------------------')
 
     const index = newArr.findIndex(obj => obj.id == 'id'); // returned =>> 0
-    //console.log(index)
+    //console.log(index) //to find the index number
     //Since the heading for each column will be stored in the object keys, you do not need to create an object for the heading row itself.
     if (index > -1) {
       newArr.splice(0,1);
@@ -124,6 +124,7 @@ for (i = 0; i < newArr.length; i++){
 }
 avg = sum / newArr.length
 console.log(avg)
+console.log('-------------')
         //Part5: Full Circle
 //transform the final set of data back into CSV format.
 
@@ -135,8 +136,3 @@ for (val of newArr){
 }
 csv = head + body
 console.log(csv)
-
-/* const objectToCsv = function (newArr) {
-  const csvRows = [];
-  const headers = Object.key
-} */
