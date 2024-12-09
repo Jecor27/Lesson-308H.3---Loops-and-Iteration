@@ -127,18 +127,16 @@ console.log(avg)
         //Part5: Full Circle
 //transform the final set of data back into CSV format.
 
-function convertToCSV(newArr){
-  const header = Object.keys(newArr[0]).join(',');
-  const rows = data.map(obj => {
-    return Object.values(newArr)
-    .map(val => {
-      if (typeof val === 'string') {
-        return '"' + val.replace(/"/g, '""') + '"';
-      }
-      return val;
-    })
-    .join(',');
-  });
-  return header + '\n' + rows.join('\n');
+let csv = '';
+const head = Object.keys(newArr[0]).join(",") + '\n';
+let body = ''
+for (val of newArr){
+  body += Object.values(val).join(",") + "\n"
 }
-convertToCSV();
+csv = head + body
+console.log(csv)
+
+/* const objectToCsv = function (newArr) {
+  const csvRows = [];
+  const headers = Object.key
+} */
